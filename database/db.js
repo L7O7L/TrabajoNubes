@@ -1,11 +1,14 @@
+
+const { DB_DATABASE, DB_HOST, DB_PASSWORD, DB_USER, DB_PORT } = require('./config.js')
+
 const mysql = require('mysql')
 
 const conexion = mysql.createConnection({
-    host : process.env.DB_HOST || 3306,
-    user : process.env.DB_USER || 'root',
-    password : process.env.DB_PASS || '',
-    database : process.env.DB_DATABASE || 'nubes',
-    port: process.env.DB_PORT || 3306,
+    host : DB_HOST,
+    user : DB_USER,
+    password : DB_PASSWORD,
+    database : DB_DATABASE,
+    port: DB_PORT,
 })
 
 conexion.connect( (error)=> {
