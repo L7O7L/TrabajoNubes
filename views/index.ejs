@@ -133,7 +133,7 @@
                 </td>
                 <td>
                   <a href="/edit/<%= producto.id %>" class="btn btn-outline-info"><i class='bx bxs-edit'>Editar</i></a>
-                  <a href="/delete/<%= producto.id %>" class="btn btn-outline-danger"><i
+                  <a href="/delete/<%= producto.id %>" onclick="return  DeleteConfirm()" class="btn btn-outline-danger"><i
                       class='bx bxs-trash-alt'>Eliminar</i></a>
                 </td>
               </tr>
@@ -164,6 +164,14 @@
     integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
     crossorigin="anonymous"></script>
   <script src="dashboard.js"></script>
+  <script type="text/javascript">
+    function DeleteConfirm() {
+        if (confirm("Quieres Eliminar el Registro?"))
+            return true;
+        else
+            return false;
+    }
+</script>
 </body>
 
 </html>
