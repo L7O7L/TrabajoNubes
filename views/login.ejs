@@ -27,18 +27,18 @@
     <form id="formLogin" action="/login" method="POST">
       <img class="mb-4" src="https://assets.epuzzle.info/puzzle/098/820/original.jpg" alt="" width="100" height="100">
       <div class="form-floating">
-        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
         <label for="email">Email</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" id="pass" name="pass" placeholder="Password">
+        <input type="password" class="form-control" id="pass" name="pass" placeholder="Password" required>
         <label for="pass">Password</label>
       </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+      <button class="w-100 btn btn-primary" type="submit">Login</button>
     </form>
 
     <br>
-    <a href="/register" type="button" class="w-100 btn btn-lg btn-bd-primary">Registrarse</a>
+    <a href="/register" type="button" class="w-100 btn btn-warning">Registrarse</a>
   </main>
 
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
