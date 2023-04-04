@@ -12,13 +12,13 @@ router.get('/', authController.isAuthenticated, (req, res)=>{
         if(error){
             throw error;
         } else {                       
-            res.render('index', {results:results});  
-            console.log(results)          
+            res.render('index', {results:results})
+      
         }   
     })
 })
 router.get('/login', (req, res)=>{
-    res.render('login', {alert:false})
+    res.render('login', {alert: 0})
 })
 router.get('/register', (req, res)=>{
     res.render('register')
